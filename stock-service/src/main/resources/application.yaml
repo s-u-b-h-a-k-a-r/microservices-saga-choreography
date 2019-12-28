@@ -1,0 +1,38 @@
+logging:
+    level:
+        com:
+            pattern: DEBUG
+server:
+    port: 8083
+    servlet:
+        context-path: /api
+spring:
+    application:
+        name: stock-service
+    jpa:
+        show-sql: true
+    datasource:
+        platform: postgres
+        url: 'jdbc:h2:file:./target/stock-service'
+        username: sa
+        password: 
+    h2:
+        console:
+            enabled: true
+            path: /h2
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+
+queue:
+   order-done:
+           ORDER_DONE_EVENT
+   billed-order:
+           BILLED_ORDER_EVENT
+topic
+   order-canceled:
+          ORDER_CANCELED_TOPIC
+          
+          

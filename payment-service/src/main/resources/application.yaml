@@ -1,0 +1,37 @@
+logging:
+    level:
+        com:
+            pattern: DEBUG
+server:
+    port: 8082
+    servlet:
+        context-path: /api
+spring:
+    application:
+        name: payment-service
+    jpa:
+        show-sql: true
+    datasource:
+        platform: postgres
+        url: 'jdbc:h2:file:./target/payment-service'
+        username: sa
+        password: 
+    h2:
+        console:
+            enabled: true
+            path: /h2
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+
+queue:
+   order-create:
+           ORDER_CREATED_EVENT
+   billed-order:
+           BILLED_ORDER_EVENT
+   refund-payment:
+          REFUND_PAYMENT_EVENT
+          
+          
