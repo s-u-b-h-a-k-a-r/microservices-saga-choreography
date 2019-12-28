@@ -12,7 +12,7 @@ pluginManagement {
 		}
 	}
 }
-rootProject.name = 'microservices-saga-choreography-pattern'
+rootProject.name = 'microservices-saga-choreography'
 include ':order-service'
 include ':payment-service'
 include ':stock-service'
