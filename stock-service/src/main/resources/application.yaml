@@ -25,14 +25,11 @@ spring:
         port: 5672
         username: guest
         password: guest
-
 queue:
    order-done:
            ORDER_DONE_EVENT
    billed-order:
            BILLED_ORDER_EVENT
-topic
+topic:
    order-canceled:
-          ORDER_CANCELED_TOPIC
-          
-          
+          ORDER_CANCELED_EVENT          
